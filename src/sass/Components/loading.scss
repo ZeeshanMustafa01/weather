@@ -1,0 +1,30 @@
+.overlay {
+	width: 100%;
+	height: 100vh;
+	background: radial-gradient(circle at 100%, #333, #333 50%);
+	z-index: 1000;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	gap: 3rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading {
+	font-size: 1.8rem;
+	letter-spacing: 4px;
+	font-weight: 300;
+}
+
+.spinner {
+	display: flex;
+
+	font-size: 6rem;
+	color: $color-grey-light-1;
+	animation: rotate 0.6s infinite linear;
+}

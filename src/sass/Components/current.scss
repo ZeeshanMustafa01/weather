@@ -1,0 +1,101 @@
+//*********  Current Container ********//
+.city {
+	grid-column: full-start / full-end;
+	justify-self: center;
+	text-align: center;
+	color: $color-grey-light-1;
+
+	padding-top: 8rem;
+	animation: $animation-name $animation-duration;
+
+	&__title {
+		font-size: 3rem;
+		font-weight: 500;
+		letter-spacing: 3px;
+		text-transform: capitalize;
+	}
+}
+
+//********* Current Weather ********//
+.weather {
+	&__info {
+		@include center();
+	}
+	&__icon {
+		height: 8rem;
+		max-width: auto;
+		display: flex;
+		justify-items: center;
+	}
+	&__temp {
+		font-size: 5rem;
+		font-weight: 500;
+		position: relative;
+		margin-right: 2rem;
+
+		span {
+			font-size: 3rem;
+			font-weight: 300;
+			position: absolute;
+			top: 0.5rem;
+		}
+	}
+	&__format {
+		display: flex;
+		gap: 0.8rem;
+		flex-direction: column;
+
+		&--option {
+			font-size: 2.2rem;
+			padding: 0.4rem 0.6rem;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			color: $color-grey-light-1;
+			border-radius: 40%;
+			background-color: transparent;
+
+			&:hover {
+				color: $color-grey-dark-1;
+				background-color: $color-grey-light-1;
+			}
+		}
+
+		.active {
+			color: $color-grey-dark-1;
+			background-color: $color-grey-light-1;
+		}
+	}
+	&__today {
+		font-size: 2rem;
+		font-weight: 500;
+		letter-spacing: 2px;
+		text-transform: capitalize;
+	}
+
+	&__update {
+		font-weight: 400;
+		font-size: 1rem;
+		letter-spacing: 1px;
+	}
+}
+
+//*********  Current Other Info ********//
+.more--info {
+	display: flex;
+	gap: 2rem;
+
+	font-size: 1.2rem;
+	font-weight: 500;
+
+	&__box {
+		display: flex;
+		gap: 0.5rem;
+
+		list-style: none;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		margin-bottom: 4rem;
+	}
+}

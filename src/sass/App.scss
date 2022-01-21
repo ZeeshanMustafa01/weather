@@ -1,0 +1,18 @@
+@import './Abstracts/mixins';
+@import './Abstracts/variables';
+
+@import './Base/base';
+@import './Base/animations';
+@import './Base/typography';
+@import './Base/utilities';
+
+@import './Components/loading.scss';
+@import './Components/navbar.scss';
+@import './Components/alert.scss';
+@import './Components/current.scss';
+@import './Components/days.scss';
+@import './Components/hours.scss';
+@import './Components/currentOthers.scss';
+
+@import './Layouts/header';
+@import './Layouts/footer';

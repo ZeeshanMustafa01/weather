@@ -1,0 +1,117 @@
+.hours--container {
+	grid-column: center-start/center-end;
+	position: relative;
+}
+
+.hourly--Heading {
+	font-size: 2.6rem;
+	font-weight: 400;
+	border-bottom: 1px solid $color-grey-light-1;
+}
+
+.hours {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+	text-align: center;
+	margin-top: 0.5rem;
+	margin-bottom: 4rem;
+
+	animation: $animation-name $animation-duration;
+
+	@media only screen and (max-width: $bp-small) {
+		grid-template-columns: 1fr;
+		padding-top: 1rem;
+	}
+
+	&__arrow--right,
+	&__arrow--left {
+		cursor: pointer;
+		height: 4rem;
+		width: 4rem;
+		font-size: 2.4rem;
+		border-radius: 50%;
+		border: 2px solid transparent;
+		background-color: transparent;
+		color: $color-grey-light-1;
+		transition: all 0.4s;
+		@include center();
+
+		position: absolute;
+		top: 50%;
+
+		@media only screen and (max-width: $bp-small) {
+			display: none;
+		}
+	}
+
+	&__arrow--right {
+		right: -2rem;
+
+		&:hover {
+			border: 2px solid $color-grey-light-1;
+		}
+	}
+	&__arrow--left {
+		left: -2rem;
+
+		&:hover {
+			border: 2px solid $color-grey-light-1;
+		}
+	}
+
+	.hour {
+		width: 100%;
+		text-align: center;
+
+		@media only screen and (max-width: $bp-large) {
+			margin-bottom: 2rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			@include center();
+		}
+
+		&__weather--icon {
+			max-height: 4rem;
+			width: auto;
+		}
+
+		&__details {
+			width: 100%;
+			list-style: none;
+			text-align: center;
+			font-size: 1.2rem;
+
+			@media only screen and (max-width: $bp-small) {
+				@include center();
+				justify-content: space-evenly;
+			}
+		}
+
+		&__temp {
+			font-size: 1.8rem;
+			font-weight: 300;
+
+			@media only screen and (max-width: $bp-small) {
+				font-size: 1.2rem;
+			}
+		}
+
+		&__time {
+			font-weight: 700;
+			margin-top: 0.4rem;
+			letter-spacing: 2px;
+			border-top: 1px inset $color-grey-light-1;
+
+			@media only screen and (max-width: $bp-small) {
+				border-top: none;
+				margin-top: 0;
+				letter-spacing: 0;
+			}
+		}
+	}
+}

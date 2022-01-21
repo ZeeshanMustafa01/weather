@@ -1,0 +1,104 @@
+//*********  Navbar Container ********//
+.navbar {
+	grid-column: full-start / full-end;
+
+	padding: 0.6rem 2rem;
+	height: 5rem;
+	background-image: linear-gradient(to right, #1e293b, #00476d);
+
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+
+	@include center();
+	gap: 2rem;
+	justify-content: space-between;
+
+	@media only screen and (max-width: $bp-small) {
+		padding: 0.6rem 1rem;
+		gap: 1rem;
+	}
+	&__heading {
+		font-size: 2.2rem;
+		font-weight: 400;
+		color: $color-grey-light-1;
+	}
+
+	&__actions {
+		display: flex;
+		gap: 5rem;
+	}
+}
+
+//*********  Navbar Icons ********//
+.nav--icons {
+	gap: 5rem;
+	@include center();
+
+	font-size: 2.8rem;
+	color: $color-grey-light-1;
+
+	@media only screen and (max-width: $bp-small) {
+		display: none;
+	}
+
+	&__box {
+		@include center();
+	}
+
+	.nav--icon {
+		& {
+			color: $color-grey-light-2;
+			cursor: pointer;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-grey-light-1;
+		}
+
+		&__re {
+			transition: 0.3s;
+
+			&:active {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+//*********  Navbar Search ********//
+.search {
+	@include center();
+
+	&__input {
+		max-width: 100%;
+		padding: 1rem 1.5rem;
+		border: none;
+		outline: none;
+		font-size: 1.6rem;
+		border-radius: 2px;
+		letter-spacing: 0.5px;
+		position: relative;
+	}
+	&__icons {
+		right: 3rem;
+		gap: 0.3rem;
+		@include center();
+		position: absolute;
+
+		@media only screen and (max-width: $bp-small) {
+			right: 1.4rem;
+		}
+	}
+	&__icon {
+		cursor: pointer;
+		font-size: 2rem;
+		transform: rotate(90deg);
+		color: $color-grey-light-2;
+
+		&:hover {
+			color: $color-grey-dark-1;
+		}
+	}
+}
