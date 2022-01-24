@@ -40,6 +40,7 @@ function Main(props) {
 		try {
 			const { data } = await http.get(getWeatherData(lat, lon, weathFormat));
 			setdata(data);
+			console.clear();
 		} catch (error) {
 			if (error) return toast.error('Internet is Slow...');
 		}
