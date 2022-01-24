@@ -30,8 +30,8 @@
 
 	@media only screen and (max-width: $bp-small) {
 		display: grid;
-		justify-items: center;
 		align-items: center;
+		justify-items: start;
 		grid-template-columns: repeat(4, 1fr);
 
 		margin-bottom: 0;
@@ -45,8 +45,6 @@
 		@media only screen and (max-width: $bp-small) {
 			text-transform: capitalize;
 			font-size: 1.6rem;
-
-			justify-self: start;
 		}
 	}
 

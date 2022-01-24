@@ -222,7 +222,7 @@ h3 {
   text-align: center;
   color: #f9f7f6;
   padding-top: 8rem;
-  animation: fadeInUp 1s;
+  animation: fadeInUp 0.5s;
 }
 .city__title {
   font-size: 3rem;
@@ -309,7 +309,7 @@ h3 {
 .week {
   grid-column: center-start/center-end;
   margin-bottom: 4rem;
-  animation: fadeInUp 1s;
+  animation: fadeInUp 0.5s;
 }
 .week__heading {
   border-bottom: 1px solid #f9f7f6;
@@ -341,8 +341,8 @@ h3 {
 @media only screen and (max-width: 31.25em) {
   .day {
     display: grid;
-    justify-items: center;
     align-items: center;
+    justify-items: start;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 0;
   }
@@ -356,7 +356,6 @@ h3 {
   .day__name {
     text-transform: capitalize;
     font-size: 1.6rem;
-    justify-self: start;
   }
 }
 .day__deg {
@@ -397,7 +396,7 @@ h3 {
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 4rem;
-  animation: fadeInUp 1s;
+  animation: fadeInUp 0.5s;
 }
 @media only screen and (max-width: 31.25em) {
   .hours {
@@ -478,7 +477,7 @@ h3 {
 }
 @media only screen and (max-width: 31.25em) {
   .hours .hour__temp {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 }
 .hours .hour__time {
@@ -497,7 +496,7 @@ h3 {
 
 .dayInfo {
   grid-column: center-start/center-end;
-  animation: fadeInUp 1s;
+  animation: fadeInUp 0.5s;
 }
 .dayInfo__heading {
   margin-bottom: 0.5rem;
